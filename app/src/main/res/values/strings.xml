@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">FundooApp</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_log_in">Login</string>
+    <string name="action_log_in_short">Login</string>
+    <string name="action_register_here">RegisterHere</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_notes">Notes</string>
+    <string name="menu_reminders">Reminders</string>
+    <string name="menu_add_label">Add Label</string>
+    <string name="menu_archive">Archive</string>
+    <string name="menu_trash">Trash</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_help_feedback">Help and feedback</string>
+    <string name="logout">Logout</string>
+    <string name="search">Search Notes</string>
+
+    <string name="menu_label">label</string>
+    <string name="menu_paint">Paint</string>
+    <string name="menu_mic">Mic</string>
+    <string name="menu_image">Image</string>
+
+    <string name="title">Title</string>
+    <string name="note">Note</string>
+    <string name="description">description</string>
+    <string name="save">Save</string>
+    <string name="create_new_label">Create new label</string>
+    <string name="take_note">Take Note....</string>
+
+    //__Color Strings__
+    <string name="none">None</string>
+    <string name="white">white</string>
+    <string name="black">black</string>
+    <string name="green">green</string>
+    <string name="yellow">yellow</string>
+    <string name="pink">pink</string>
+    <string name="silver">silver</string>
+    <string name="olive">olive</string>
+    <string name="skyBlue">skyBlue</string>
+    <string name="purple">purple</string>
+    <string name="colorDefault">white</string>
+
+    <string name="none_hexCode">#ffffff</string>
+    <string name="white_hexCode">#ffffff</string>
+    <string name="black_hexCode">black</string>
+    <string name="green_hexCode">#9ACD32</string>
+    <string name="yellow_hexCode">#FFFF00</string>
+    <string name="pink_hexCode">#FFC0CB</string>
+    <string name="silver_hexCode">#C0C0C0</string>
+    <string name="olive_hexCode">#808000</string>
+    <string name="skyBlue_hexCode">#87CEEB</string>
+    <string name="purple_hexCode">#800080</string>
+    <string name="colorDefault_hexCode">#ffffff</string>
+
+</resources>

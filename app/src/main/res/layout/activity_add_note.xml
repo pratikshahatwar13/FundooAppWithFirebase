@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_add_note_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:details=".Dashboard.View.AddNoteActivity"
+    tools:context="com.bridgelabzs.add_note_page.AddNoteActivity">
+
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/bottom_bar_add_note"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_createNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_short"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="12dp">
+            <CheckBox
+                android:id="@+id/cb_pin"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:button="@drawable/cbbtn_pinned"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_btn_reminder"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.55" />
+
+            <ImageButton
+                android:id="@+id/img_btn_archive"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="7dp"
+                android:background="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/ic_outline_archive"
+                app:layout_constraintBaseline_toBaselineOf="@+id/img_btn_reminder"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="VectorDrawableCompat"/>
+
+            <ImageButton
+                android:id="@+id/img_btn_reminder"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/ic_reminders"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cb_pin"
+                app:layout_constraintEnd_toStartOf="@+id/img_btn_archive"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/img_btn_backspace"
+                android:layout_width="37dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="@dimen/backspace"
+                android:layout_marginRight="170dp"
+                android:layout_marginTop="7dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cb_pin"
+                app:layout_constraintRight_toLeftOf="@+id/cb_pin"
+                app:srcCompat="@drawable/ic_keyboard_backspace"
+                tools:ignore="VectorDrawableCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/title"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_createNote"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:hint="@string/note"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
+    <TextView
+        android:id="@+id/remainder"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_title"
+        tools:ignore="MissingConstraints" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="393dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="60dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_description"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_title">
+
+                <RadioButton
+                    android:id="@+id/radio_none"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/none" />
+
+                <RadioButton
+                    android:id="@+id/radio_purple"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/purple" />
+
+                <RadioButton
+                    android:id="@+id/radio_green"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/green" />
+
+                <RadioButton
+                    android:id="@+id/radio_white"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/white" />
+
+                <RadioButton
+                    android:id="@+id/radio_yellow"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/yellow" />
+
+                <RadioButton
+                    android:id="@+id/radio_pink"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/pink" />
+
+                <RadioButton
+                    android:id="@+id/radio_silver"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/silver" />
+
+                <RadioButton
+                    android:id="@+id/radio_olive"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/olive" />
+
+                <RadioButton
+                    android:id="@+id/radio_skyBlue"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/skyBlue" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_reminder"-->
+<!--        android:layout_width="258dp"-->
+<!--        android:layout_height="34dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_description"-->
+<!--        app:layout_constraintVertical_bias="0.036" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

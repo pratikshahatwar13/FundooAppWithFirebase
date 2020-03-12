@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+<!--    color palete-->
+    <color name="darkGray">#6C6C6C</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#010000</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="olive">#808000</color>
+    <color name="yellowGreen">#9ACD32</color>
+    <color name="skyBlue">#87CEEB</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="colorDefault">#ffffff</color>
+    
+<!--    <array name="demo_colors">-->
+<!--        <item>@color/darkGray</item>-->
+<!--        <item>@color/white</item>-->
+<!--        <item>@color/black</item>-->
+<!--        <item>@color/silver</item>-->
+<!--        <item>@color/olive</item>-->
+<!--        <item>@color/yellowGreen</item>-->
+<!--        <item>@color/skyBlue</item>-->
+<!--        <item>@color/purple</item>-->
+<!--        <item>@color/pink</item>-->
+<!--        <item>@color/yellow</item>-->
+<!--        <item>@color/colorDefault</item>-->
+<!--    </array>-->
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_notes">
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.bridgelabzs.dashboard.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/nav_reminders"
+        android:name="com.bridgelabzs.dashboard.ui.reminders.RemindersFragment"
+        android:label="@string/menu_reminders"
+        tools:layout="@layout/fragment_reminders" />
+
+    <fragment
+        android:id="@+id/nav_add_label"
+        android:name="com.bridgelabzs.dashboard.ui.create_label.AddLabelFragment"
+        android:label="@string/menu_add_label"
+        tools:layout="@layout/fragment_add_label" />
+
+    <fragment
+        android:id="@+id/nav_archive"
+        android:name="com.bridgelabzs.dashboard.ui.archive.ArchiveFragment"
+        android:label="@string/menu_archive"
+        tools:layout="@layout/fragment_archive" />
+
+    <fragment
+        android:id="@+id/nav_trash"
+        android:name="com.bridgelabzs.dashboard.ui.trash.TrashFragment"
+        android:label="@string/menu_trash"
+        tools:layout="@layout/fragment_trash" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.bridgelabzs.dashboard.ui.settings.SettingFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.bridgelabzs.dashboard.ui.help.HelpFragment"
+        android:label="@string/menu_help_feedback"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/nav_label"
+        android:name="com.bridgelabzs.dashboard.ui.label.LabelFragment"
+        android:label="@string/menu_label"
+        tools:layout="@layout/fragment_label" />
+
+    <fragment
+        android:id="@+id/nav_paint"
+        android:name="com.bridgelabzs.dashboard.ui.paint.PaintFragment"
+        android:label="@string/menu_paint"
+        tools:layout="@layout/fragment_paint" />
+
+    <fragment
+        android:id="@+id/nav_mic"
+        android:name="com.bridgelabzs.dashboard.ui.mic.MicFragment"
+        android:label="@string/menu_mic"
+        tools:layout="@layout/fragment_mic" />
+
+    <fragment
+        android:id="@+id/nav_image"
+        android:name="com.bridgelabzs.dashboard.ui.image.ImageFragment"
+        android:label="@string/menu_image"
+        tools:layout="@layout/fragment_image" />
+
+</navigation>

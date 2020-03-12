@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_add_note_activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:details=".Dashboard.View.AddNoteActivity"
+    tools:context="com.bridgelabzs.add_note_page.AddNoteActivity">
+
+    <!--    <include-->
+    <!--        android:id="@+id/include"-->
+    <!--        layout="@layout/bottom_bar_add_note"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_createNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_short"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="12dp">
+            <CheckBox
+                android:id="@+id/cb_pin"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:button="@drawable/cbbtn_pinned"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_btn_reminder"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.55" />
+
+            <ImageButton
+                android:id="@+id/img_btn_archive"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="7dp"
+                android:background="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/ic_outline_archive"
+                app:layout_constraintBaseline_toBaselineOf="@+id/img_btn_reminder"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="VectorDrawableCompat"/>
+
+            <ImageButton
+                android:id="@+id/img_btn_reminder"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/ic_reminders"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cb_pin"
+                app:layout_constraintEnd_toStartOf="@+id/img_btn_archive"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/img_btn_backspace"
+                android:layout_width="37dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="@dimen/backspace"
+                android:layout_marginRight="170dp"
+                android:layout_marginTop="7dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cb_pin"
+                app:layout_constraintRight_toLeftOf="@+id/cb_pin"
+                app:srcCompat="@drawable/ic_keyboard_backspace"
+                tools:ignore="VectorDrawableCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>
